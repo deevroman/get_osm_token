@@ -1,0 +1,27 @@
+html, body {
+    width: 350px;
+}
+
+.input-link {
+    width: 95%;
+    padding: 4px;
+    /*font-size: 1.1em;*/
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+    outline: 0;
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 16px;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}

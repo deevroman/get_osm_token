@@ -1,0 +1,6 @@
+{
+  "extensionDescription": {
+    "message": "Расширение для получения OAuth-токена от OSM API. Несколько кликов и заветный токен можно вставить в конфиг вашего приложения. Забудьте о библиотеках и чтении документации об OAuth!",
+    "description": "Description of the extension."
+  }
+}

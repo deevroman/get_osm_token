@@ -1,0 +1,1 @@
+zip GetOSMToken_0.1.StoreVersion.zip _locales/*/* icons/* src/* src/*/* manifest.json
