@@ -1,6 +1,9 @@
 
 <h1 align="center">Get OSM OAuth Token</h1>
-
+<p align="center">
+  <a href="https://addons.mozilla.org/en-US/firefox/addon/get-osm-oauth-token">
+    <img src="https://i.imgur.com/dvof8rG.png" alt="Firefox add-ons"></a>
+</p>
 
 ## Description
 [Firefox-extension](https://addons.mozilla.org/en/firefox/addon/get-osm-oauth-token/) to get OpenStreetMap's OAuth token in a couple of clicks
