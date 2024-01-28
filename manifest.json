@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Get OSM OAuth Token",
-  "version": "0.1",
+  "version": "0.1.1",
   "description": "__MSG_extensionDescription__",
   "author": "Roman Deev",
   "homepage_url": "https://github.com/deevroman/get_osm_token",
@@ -10,12 +10,10 @@
     "96": "icons/Oauth_logo.svg"
   },
   "permissions": [
-    "<all_urls>",
     "https://www.openstreetmap.org/*",
     "https://master.apis.dev.openstreetmap.org/*",
     "webRequest",
     "webRequestBlocking",
-    "tabs",
     "activeTab",
     "clipboardWrite",
     "storage"

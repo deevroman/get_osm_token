@@ -70,25 +70,31 @@ async function runOAuthFlow(client_id, client_secret = "", redirect_uri = redire
         body: (new URLSearchParams(token_params)).toString()
     })).json();
     let access_token = j.access_token;
-    await navigator.clipboard.writeText(access_token);
+
+    await browser.tabs.insertCSS(tabs[0].id, {
+        code: '.ext-blurred{ filter: blur(50%); color: transparent; text-shadow: 0 0 10px rgba(0,0,0,0.5);}'
+    })
     await browser.tabs.executeScript(tabs[0].id, {
         code: `
-                let input = document.createElement("input");
-                input.value = "${access_token}"
-                input.readOnly = true
-                input.classList.add("btn", "btn-outline-primary")
-                // input.style.width = "100%"
-                document.getElementById("ext-get-token").after(input)
-                input.onclick = () => {
-                    navigator.clipboard.writeText("${access_token}").then(() => {
-                        let copied = document.createElement("span")
-                        copied.innerText = "Copied!"
-                        copied.style.color = "green"
-                        input.after(copied)
-                        copied.before(document.createTextNode("\xA0"))
-                    })
+                let token_span = document.createElement("span");
+                token_span.textContent = "${access_token}"
+                token_span.classList.add("ext-blurred")
+                token_span.style.userSelect = "all"
+                
+                document.getElementById("ext-get-token").after(token_span)
+                token_span.before(document.createTextNode("\xA0"))
+                
+                token_span.onclick = function () {
+                    token_span.classList.remove("ext-blurred")
                 }
-                input.before(document.createTextNode("\xA0"))
+                
+                navigator.clipboard.writeText("${access_token}").then(() => {
+                    let copied = document.createElement("span")
+                    copied.innerText = "Copied to the clipboard!"
+                    copied.style.color = "green"
+                    token_span.after(copied)
+                    copied.before(document.createTextNode("\xA0"))
+                })
              `
     });
 

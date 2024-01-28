@@ -3,7 +3,7 @@
 
 
 ## Description
-Extension to get OpenStreetMap's OAuth token in a couple of clicks
+[Firefox-extension](https://addons.mozilla.org/en/firefox/addon/get-osm-oauth-token/) to get OpenStreetMap's OAuth token in a couple of clicks
 
 The expansion has two goals:
 
@@ -12,11 +12,11 @@ The expansion has two goals:
 
 ### How to use
 
-0. Install the extension
+0. [Install](https://addons.mozilla.org/en/firefox/addon/get-osm-oauth-token/) the extension
 1. Click the _Create OSM OAuth2 app_ button in the extension menu
 2. Give it a name and the necessary permissions
 3. After registering, click _Get OAuth token_.
-4. Copy and paste it into your application.
+4. Copy and paste it into your application!
 
 For example, use this command in your terminal: 
 ```bash
@@ -25,15 +25,15 @@ curl -H "Authorization: Bearer <TOKEN>" https://master.apis.dev.openstreetmap.or
 
 ## Русское описание
 
-Firefox-расширение для получения OAuth-токена OpenStreetMap в пару кликов.
+[Firefox-расширение](https://addons.mozilla.org/ru/firefox/addon/get-osm-oauth-token/) для получения OAuth-токена OpenStreetMap в пару кликов.
 
 ### Как использовать
 
-0. Установите расширение
+0. [Установите](https://addons.mozilla.org/ru/firefox/addon/get-osm-oauth-token/) расширение
 1. Нажмите кнопку _Create OSM OAuth2 app_.
 2. Дайте ему имя и нужные права
 3. После регистрации нажмите _Get OAuth token_.
-4. Скопирйте и вставьте его в ваше приложение.
+4. Скопируйте и вставьте его в ваше приложение!  
 
 Например, попробуйте выполнить в вашем терминале:
 ```bash
