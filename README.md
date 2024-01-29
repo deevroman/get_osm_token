@@ -26,6 +26,8 @@ For example, use this command in your terminal:
 curl -H "Authorization: Bearer <TOKEN>" https://master.apis.dev.openstreetmap.org/api/0.6/user/details.json
 ```
 
+p.s. Chromium? Manifest v3 is terrible. I don't want to waste my time on it.
+
 ## Русское описание
 
 [Firefox-расширение](https://addons.mozilla.org/ru/firefox/addon/get-osm-oauth-token/) для получения OAuth-токена OpenStreetMap в пару кликов.
@@ -42,3 +44,5 @@ curl -H "Authorization: Bearer <TOKEN>" https://master.apis.dev.openstreetmap.or
 ```bash
 curl -H "Authorization: Bearer <TOKEN>" https://master.apis.dev.openstreetmap.org/api/0.6/user/details.json
 ```
+
+p.s. А для хрома? Manifest v3 ужасен, не хочу тратить время на чью-то перестановку кроватей
