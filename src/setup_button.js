@@ -1,6 +1,6 @@
 if (!window.location.href.endsWith("/new")) {
     let client_id = document.querySelector("code").textContent;
-    let redirect_uri = document.querySelector(".table > tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(2) > ul:nth-child(1) > li:nth-child(1)").textContent;
+    let redirect_uri = document.querySelector(".table > tbody:nth-child(1) > tr:last-child > td:nth-child(2) > ul:nth-child(1) > li:nth-child(1)").textContent;
 
     let btn = document.createElement("button");
     btn.textContent = "Get OAuth token";
