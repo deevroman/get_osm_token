@@ -26,6 +26,10 @@ For example, use this command in your terminal:
 curl -H "Authorization: Bearer <TOKEN>" https://master.apis.dev.openstreetmap.org/api/0.6/user/details.json
 ```
 
+### Demo
+<img src="https://pdf.trickyfoxy.ru/get-osm-token-extenstion.webp">
+</details>
+
 p.s. Chromium? Manifest v3 is terrible. I don't want to waste my time on it.
 
 ## Русское описание
