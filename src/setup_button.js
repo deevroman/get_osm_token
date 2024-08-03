@@ -18,7 +18,7 @@ if (!window.location.href.endsWith("/new")) {
             client_id: client_id,
             redirect_uri: redirect_uri,
             server: window.location.origin,
-            scope: Array.from(document.querySelectorAll("code.text-muted")).map((i) => i.textContent.slice(1, -1))
+            scope: Array.from(document.querySelectorAll("code.text-body-secondary")).map((i) => i.textContent.slice(1, -1))
         });
     });
 }
