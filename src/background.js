@@ -33,7 +33,7 @@ async function runOAuthFlow(client_id, client_secret = "", redirect_uri = redire
         );
     }
     await browser.tabs.executeScript(tab.id, {
-        code: 'document.querySelector(".btn-primary").click()',
+        code: 'setTimeout(() => {document.querySelector(".btn-primary").click()}, 500)',
     });
 
 
@@ -72,13 +72,15 @@ async function runOAuthFlow(client_id, client_secret = "", redirect_uri = redire
     let access_token = j.access_token;
 
     await browser.tabs.insertCSS(tabs[0].id, {
-        code: '.ext-blurred{ filter: blur(50%); color: transparent; text-shadow: 0 0 10px rgba(0,0,0,0.5);}'
+        code: '.ext-blurred{ filter: blur(50%); color: transparent; text-shadow: 0 0 10px rgba(0,0,0,1);}'
     })
     await browser.tabs.executeScript(tabs[0].id, {
         code: `
-                let token_span = document.createElement("span");
+                var token_span = document.createElement("span");
                 token_span.textContent = "${access_token}"
-                token_span.classList.add("ext-blurred")
+                if (token_span.textContent !== "undefined") {
+                    token_span.classList.add("ext-blurred")
+                }
                 token_span.style.userSelect = "all"
                 
                 document.getElementById("ext-get-token").after(token_span)
